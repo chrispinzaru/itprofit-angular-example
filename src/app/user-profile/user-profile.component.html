@@ -1,0 +1,14 @@
+
+
+<dl [title]="name" [tabIndex]="0">
+
+  <img [src]="avatarUrl" (click)="handleAvatarClick($event)">
+
+  <dt>Name:</dt>
+  <dd>{{ fullname }}</dd>
+<!--  <input name="name" [(ngModel)]=""-->
+
+
+  <dt>Age:</dt>
+  <dd>{{ age }}</dd>
+</dl>
