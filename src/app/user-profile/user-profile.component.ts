@@ -7,6 +7,8 @@ import {Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, Si
 })
 export class UserProfileComponent implements OnInit, OnDestroy, OnChanges {
 
+  @Input() id: number = -1;
+
   @Input() name: string = "";
   @Output() nameChange: EventEmitter<string> = new EventEmitter<string>();
 

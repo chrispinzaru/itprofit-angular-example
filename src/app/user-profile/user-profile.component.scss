@@ -1,6 +1,7 @@
 
 :host {
   display: inline-block;
+  margin-left: 15px;
 }
 
 dl {
@@ -15,5 +16,6 @@ dt {
 img {
   display: block;
   width: 50px;
+  height: 50px;
   border-radius: 50px;
 }
