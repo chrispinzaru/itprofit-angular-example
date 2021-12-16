@@ -1,15 +1,17 @@
 <p>
-  {{ title }}
-</p>
-
-<p>
   <button (click)="isVisible = !isVisible" [innerText]="isVisible ? 'Скрыть' : 'Показать'"></button>
 </p>
 
-<br><br>
+<ng-container *ngIf="isVisible">
+  <p>
+    {{ title }}
+  </p>
+
+  <br><br>
+</ng-container>
 
 <app-user-profile
-  *ngIf="isVisible"
+  *ngIf="isVisible; else noUserMessageTemplate"
   [name]="userName"
   (nameChange)="userName = $event"
 
@@ -20,6 +22,37 @@
   (profileClick)="handleProfileClick($event)"
 ></app-user-profile>
 
+<ng-template #noUserMessageTemplate>
+    <h2>
+      <i>User info is hidden</i>
+    </h2>
+</ng-template>
+
+
 <button (click)="userAge = 10; userName = 'Jack'">CLICK</button>
 
-{{ userName }} {{ userLastname }} {{ userAge }}
+<!--<ng-template appUserVisible [appUserVisible]="isVisible">-->
+<!--  {{ userName }} {{ userLastname }} {{ userAge }}-->
+<!--</ng-template>-->
+
+<p *appUserVisible="isVisible">
+  {{ userName }} {{ userLastname }} {{ userAge }}
+</p>
+
+
+<hr>
+
+<ng-container *ngIf="isVisible">
+    <app-user-profile
+      *ngFor="let user of users; let idx = index; let first=first; let last=last;"
+      [id]="user.id"
+      [name]="user.name"
+      [lastname]="user.lastname"
+      [age]="user.age"
+      [avatarUrl]="user.avatarUrl"
+      [class.user-profile--first]="first"
+      [class.user-profile--last]="last"
+      [ngStyle]="{backgroundColor: first ? 'red' : last ? 'blue' : ''}">
+    </app-user-profile>
+</ng-container>
+

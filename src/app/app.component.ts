@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './user-profile/user.interface';
+import { mockUsers } from './user-profile/mock-users';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,11 @@ export class AppComponent {
 
   public isVisible: boolean = true;
 
+  public users: User[] = [...mockUsers];
+
   public handleProfileClick(event: MouseEvent) {
     console.log(event);
   }
 }
+
+
