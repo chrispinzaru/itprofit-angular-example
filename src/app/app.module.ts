@@ -6,6 +6,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import {FormsModule} from "@angular/forms";
 import { UserVisibleDirective } from './user-profile/user-visible.directive';
 import { ZoomDirective } from "./user-profile/zoom.directive";
+import { UsersExampleComponent } from './comp/users-example/users-example.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ZoomDirective } from "./user-profile/zoom.directive";
     UserProfileComponent,
     UserVisibleDirective,
     ZoomDirective,
+    UsersExampleComponent,
   ],
   imports: [
     BrowserModule,
