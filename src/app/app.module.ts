@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { UserVisibleDirective } from './user-profile/user-visible.directive';
 import { ZoomDirective } from "./user-profile/zoom.directive";
 import { UsersExampleComponent } from './comp/users-example/users-example.component';
+import { PipesExampleComponent } from './comp/pipes-example/pipes-example.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UsersExampleComponent } from './comp/users-example/users-example.compon
     UserVisibleDirective,
     ZoomDirective,
     UsersExampleComponent,
+    PipesExampleComponent,
   ],
   imports: [
     BrowserModule,

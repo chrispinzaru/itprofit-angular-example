@@ -1,0 +1,18 @@
+
+
+<p>{{ pi | number:'1.0-2' }}</p>
+
+<p>{{ amount | percent:'4.3-5':'en' }}</p>
+
+<p>{{ text | uppercase | lowercase | titlecase | slice:2:-2 }}</p>
+
+<p [innerText]="now | date:'HH:mm:ss'"></p>
+
+
+<ng-container *ngIf="{visible: true} as state;">
+
+  <button type="button" (click)="state.visible = !state.visible">DEBUG SHOW/HIDE</button>
+
+  <pre *ngIf="state.visible">{{ user | json }}</pre>
+</ng-container>
+
