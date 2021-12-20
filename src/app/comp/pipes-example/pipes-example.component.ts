@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { mockUsers } from '../../user-profile/mock-users';
-import {User} from "../../user-profile/user.interface";
+import { User } from "../../user-profile/user.interface";
 
 @Component({
   selector: 'app-pipes-example',
@@ -17,12 +17,29 @@ export class PipesExampleComponent implements OnInit {
   now: Date = new Date();
 
   user: User;
+  users: User[]
+
+  maxLength: number = 10;
 
   constructor() {
-    this.user = [...mockUsers].pop() as User;
+    this.users = [...mockUsers];
+    this.user = this.users.pop() as User;
   }
 
   ngOnInit(): void {
+  }
+
+  onAddUser() {
+    let newUser: User = {
+      name: "Bro",
+      age: 23,
+      id: 12321421,
+      avatarUrl: "",
+      email: "",
+      lastname: "",
+    };
+
+    this.users.push(newUser);
   }
 
 }

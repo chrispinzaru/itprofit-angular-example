@@ -8,6 +8,8 @@ import { UserVisibleDirective } from './user-profile/user-visible.directive';
 import { ZoomDirective } from "./user-profile/zoom.directive";
 import { UsersExampleComponent } from './comp/users-example/users-example.component';
 import { PipesExampleComponent } from './comp/pipes-example/pipes-example.component';
+import { TruncatePipe } from './comp/pipes-example/truncate.pipe';
+import { UsersPipe } from './comp/pipes-example/users.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { PipesExampleComponent } from './comp/pipes-example/pipes-example.compon
     ZoomDirective,
     UsersExampleComponent,
     PipesExampleComponent,
+    TruncatePipe,
+    UsersPipe,
   ],
   imports: [
     BrowserModule,

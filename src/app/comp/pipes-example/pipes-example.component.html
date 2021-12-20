@@ -9,10 +9,16 @@
 <p [innerText]="now | date:'HH:mm:ss'"></p>
 
 
+<br><br><hr>
+
+<input name="max-length" [(ngModel)]="text">
+<p>{{ text | truncate:maxLength:'...' }}</p>
+
+<button (click)="onAddUser()">Add user with name "Bro"</button>
+<p *ngFor="let user of users | usersNameStartsWith:'B'"> {{ user.name }}</p>
+
 <ng-container *ngIf="{visible: true} as state;">
-
   <button type="button" (click)="state.visible = !state.visible">DEBUG SHOW/HIDE</button>
-
   <pre *ngIf="state.visible">{{ user | json }}</pre>
 </ng-container>
 
