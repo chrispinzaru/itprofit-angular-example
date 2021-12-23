@@ -32,11 +32,6 @@ export class UserProfileComponent implements OnInit, OnDestroy, OnChanges {
 
   @Output('profileClick') clickEmitter: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
-  constructor() {
-    // @ts-ignore;
-    window.foo = this;
-  }
-
   public handleAvatarClick(event: MouseEvent) {
     this.clickEmitter.emit(event)
     this.nameChange.emit("John");
