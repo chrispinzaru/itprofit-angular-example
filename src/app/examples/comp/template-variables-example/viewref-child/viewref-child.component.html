@@ -1,0 +1,12 @@
+
+<ng-template #defaultTemplateRef>
+  Hello!
+</ng-template>
+
+<ng-container *ngTemplateOutlet="templateRef ? templateRef : defaultTemplateRef"></ng-container>
+
+<ng-content select=".content-from-parent"></ng-content>
+
+<ng-content select="app-user-profile"></ng-content>
+
+<h1>{{ count }}</h1>

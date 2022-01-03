@@ -1,4 +1,19 @@
 
+<p>AppComponent</p>
 
+<nav class="app-navigation">
+  <a routerLink="" routerLinkActive="app-navigation__link--active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+
+  <a [routerLink]="'/examples/users'" [routerLinkActive]="'app-navigation__link--active'" class="app-navigation__link">Users</a>
+
+  <a routerLink="/examples/pipes" routerLinkActive="app-navigation__link--active" class="app-navigation__link">Pipes</a>
+
+  <a routerLink="/examples/viewref" routerLinkActive="app-navigation__link--active" class="app-navigation__link">Viewref</a>
+</nav>
+
+<hr>
+
+<router-outlet></router-outlet>
 <!--<app-users-example></app-users-example>-->
-<app-pipes-example></app-pipes-example>
+<!--<app-pipes-example></app-pipes-example>-->
+<!--<app-viewref-example></app-viewref-example>-->

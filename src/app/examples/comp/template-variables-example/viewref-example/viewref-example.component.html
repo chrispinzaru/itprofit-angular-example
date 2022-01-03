@@ -1,0 +1,22 @@
+<ng-template #greetingTemplate>
+  GREETINGS!
+</ng-template>
+
+<p #title>ViewRef Example Page</p>
+<p>{{ title.innerHTML }}</p>
+
+<app-viewref-child #childComponent [templateRef]="greetingTemplate">
+  <p class="content-from-parent">HTML content from parent</p>
+
+  <p>THIS HTML won't be displayed</p>
+
+  <app-user-profile [name]="'Andrew'"></app-user-profile>
+</app-viewref-child>
+
+<button type="button" (click)="incrementCounter()">Increase ++</button>
+<button type="button" (click)="childComponent.decrement()">Decrease --</button>
+
+
+<app-viewref-child></app-viewref-child>
+<app-viewref-child></app-viewref-child>
+<app-viewref-child></app-viewref-child>

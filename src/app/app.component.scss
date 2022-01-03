@@ -1,0 +1,16 @@
+
+.app-navigation {
+  display: block;
+  margin: 15px;
+  font-size: 20px;
+
+  &__link {
+    display: inline-block;
+    margin: 8px;
+    padding: 8px;
+
+    &--active {
+      color: red;
+    }
+  }
+}
