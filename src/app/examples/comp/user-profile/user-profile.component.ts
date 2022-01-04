@@ -42,7 +42,6 @@ export class UserProfileComponent implements OnInit, OnDestroy, OnChanges {
   /** Lifecycle Events */
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     if (changes['name'] || changes['lastname']) {
       this.showFullName();
     }

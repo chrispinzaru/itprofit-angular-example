@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {User} from "../../user-profile/user.interface";
+import {User} from "../user-profile/user.interface";
 
 @Pipe({
   name: 'usersNameStartsWith',

@@ -1,24 +1,34 @@
-import { Component } from '@angular/core';
-import { User } from "../../user-profile/user.interface";
-import { mockUsers } from "../../user-profile/mock-users";
+import {Component, OnInit} from '@angular/core';
+import { User } from "../user-profile/user.interface";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-users-example',
   templateUrl: './users-example.component.html',
   styleUrls: ['./users-example.component.scss']
 })
-export class UsersExampleComponent {
-
-  public userName: string = "Alex";
-  public userLastname: string = "Shevchenco";
-  public userAge: number = -110;
-  public userAvatarUrl: string = "https://reqres.in/img/faces/7-image.jpg";
-
+export class UsersExampleComponent implements OnInit {
   public isVisible: boolean = true;
+  public users: User[];
 
-  public users: User[] = [...mockUsers];
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+  ) {
+  }
 
-  public handleProfileClick(event: MouseEvent) {
-    console.log(event);
+  ngOnInit() {
+    this.isVisible = this.activatedRoute.snapshot.data['isVisible'];
+    this.users = this.activatedRoute.snapshot.data['users'];
+  }
+
+  public handleProfileClick(userId: number) {
+    console.log("navigate to user page by userId");
+    this.router.navigate([userId], {
+      relativeTo: this.activatedRoute,
+      queryParams: {
+        hideAge: 0
+      }
+    });
   }
 }

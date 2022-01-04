@@ -18,7 +18,6 @@ import { HomeComponent } from "./home/home.component";
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

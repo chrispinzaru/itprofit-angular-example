@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { mockUsers } from '../../user-profile/mock-users';
-import { User } from "../../user-profile/user.interface";
+import { mockUsers } from '../user-profile/mock-users';
+import { User } from "../user-profile/user.interface";
 
 @Component({
   selector: 'app-pipes-example',

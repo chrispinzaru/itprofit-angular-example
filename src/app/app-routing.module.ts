@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
       path: 'examples',
-      loadChildren: () => import('./examples/examples.module').then(m => m.ExamplesModule)
+      loadChildren: () => import('./examples/examples.module').then(m => m.ExamplesModule),
   },
   {
     path: '**',
@@ -21,7 +21,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes)
-  ]
+  ],
 })
 export class AppRoutingModule {
 

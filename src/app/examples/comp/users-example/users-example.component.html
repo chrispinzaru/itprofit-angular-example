@@ -7,36 +7,6 @@
   <br><br>
 </ng-container>
 
-<app-user-profile
-  *ngIf="isVisible; else noUserMessageTemplate"
-  [name]="userName"
-  (nameChange)="userName = $event"
-
-  [(lastname)]="userLastname"
-
-  [(age)]="userAge"
-  [avatarUrl]="userAvatarUrl"
-  (profileClick)="handleProfileClick($event)"
-></app-user-profile>
-
-<ng-template #noUserMessageTemplate>
-  <h2>
-    <i>User info is hidden</i>
-  </h2>
-</ng-template>
-
-
-<button (click)="userAge = 10; userName = 'Jack'">CLICK</button>
-
-<!--<ng-template appUserVisible [appUserVisible]="isVisible">-->
-<!--  {{ userName }} {{ userLastname }} {{ userAge }}-->
-<!--</ng-template>-->
-
-<p *appUserVisible="isVisible">
-  {{ userName }} {{ userLastname }} {{ userAge }}
-</p>
-
-
 <hr>
 
 <ng-container *ngIf="isVisible">
@@ -49,6 +19,7 @@
     [avatarUrl]="user.avatarUrl"
     [class.user-profile--first]="first"
     [class.user-profile--last]="last"
-    [ngStyle]="{backgroundColor: first ? 'red' : last ? 'blue' : ''}">
+    [ngStyle]="{backgroundColor: first ? 'red' : last ? 'blue' : ''}"
+    (click)="handleProfileClick(user.id)">
   </app-user-profile>
 </ng-container>
