@@ -21,12 +21,12 @@ import {MockUsersService} from "./core/mock-users.service";
     AppRoutingModule
   ],
   providers: [
-    {
-      provide: UsersService,
-      useClass: UsersService,
-      deps: [MockUsersService]
-    }
-    // аналогия [UsersService]
+    // {
+    //   provide: UsersService,
+    //   useClass: UsersService,
+    //   deps: [MockUsersService]
+    // }
+    UsersService
   ],
   bootstrap: [AppComponent]
 })

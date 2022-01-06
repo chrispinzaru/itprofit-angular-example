@@ -7,7 +7,7 @@ import { MockUsersService } from "./mock-users.service";
 // @Injectable({
 //   providedIn: 'root'
 // })
-// @Injectable()
+@Injectable()
 export class UsersService {
   constructor(
     private mockUsersService: MockUsersService,
