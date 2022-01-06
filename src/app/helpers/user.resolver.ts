@@ -1,6 +1,6 @@
 import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from "@angular/router";
-import { User } from "../examples/comp/user-profile/user.interface";
-import { mockUsers } from "../examples/comp/user-profile/mock-users";
+import { User } from "../core/user.interface";
+import { mockUsers } from "../core/mock-users";
 
 export class UserResolver implements Resolve<User> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): User {

@@ -53,7 +53,6 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [
     UsersResolver,
-    IsAdminGuard,
     UserResolver,
   ],
 })
