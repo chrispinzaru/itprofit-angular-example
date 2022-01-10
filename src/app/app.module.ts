@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { HomeComponent } from "./home/home.component";
 import {UsersService} from "./core/users.service";
-import {MockUsersService} from "./core/mock-users.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import {MockUsersService} from "./core/mock-users.service";
   imports: [
     BrowserModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     // {

@@ -6,3 +6,11 @@ export interface User {
   avatarUrl: string;
   email: string;
 }
+
+export interface ReqResUser {
+  id: number;
+  first_name: string;
+  last_name: string;
+  avatar: string;
+  email: string;
+}
