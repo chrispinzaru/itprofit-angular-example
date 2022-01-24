@@ -1,4 +1,5 @@
 import { User } from "../core/user.interface";
+import { Observable, of } from "rxjs";
 
 export class LocalUsersService {
 
@@ -8,9 +9,8 @@ export class LocalUsersService {
     this.num = Math.random();
   }
 
-
-  public getAll(): User[] {
-    return [
+  public getAll(): Observable<User[]> {
+    return of([
       {
         "id": 7,
         "email": "michael.lawson@reqres.in",
@@ -19,7 +19,7 @@ export class LocalUsersService {
         "age": 25,
         "avatarUrl": "https://reqres.in/img/faces/7-image.jpg"
       },
-    ]
+    ]);
   }
 
 }
