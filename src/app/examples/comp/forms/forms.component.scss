@@ -1,0 +1,22 @@
+
+form {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid black;
+
+  div + div {
+    margin-top: 20px;
+  }
+
+  label {
+    display: inline-block;
+    min-width: 60px;
+    margin-right: 20px;
+    text-align: right;
+  }
+
+  button[type="submit"] {
+    margin-top: 20px;
+  }
+}

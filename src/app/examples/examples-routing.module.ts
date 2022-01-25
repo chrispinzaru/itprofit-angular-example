@@ -6,9 +6,9 @@ import {PipesExampleComponent} from "./comp/pipes-example/pipes-example.componen
 import {ViewrefExampleComponent} from "./comp/template-variables-example/viewref-example/viewref-example.component";
 import {UsersResolver} from "../helpers/users.resolver";
 import {IsAdminGuard} from "../helpers/is-admin.guard";
-import { UserProfileComponent } from "./comp/user-profile/user-profile.component";
 import {UserResolver} from "../helpers/user.resolver";
 import {UserPageComponent} from "./comp/user-page/user-page.component";
+import {FormsComponent} from "./comp/forms/forms.component";
 
 
 const routes: Routes = [
@@ -44,6 +44,10 @@ const routes: Routes = [
         path: 'viewref',
         component: ViewrefExampleComponent,
       },
+      {
+        path: 'forms',
+        component: FormsComponent
+      }
     ]
   },
 ];

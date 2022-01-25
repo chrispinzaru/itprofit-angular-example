@@ -16,6 +16,7 @@ import { ViewrefExampleComponent } from "./comp/template-variables-example/viewr
 import { ViewrefChildComponent } from './comp/template-variables-example/viewref-child/viewref-child.component';
 import { ExamplesComponent } from './comp/examples/examples.component';
 import { UserPageComponent } from './comp/user-page/user-page.component';
+import { FormsComponent } from './comp/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UserPageComponent } from './comp/user-page/user-page.component';
     ViewrefChildComponent,
     ExamplesComponent,
     UserPageComponent,
+    FormsComponent,
   ],
   exports: [
     UserProfileComponent,

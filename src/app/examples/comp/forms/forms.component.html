@@ -1,0 +1,27 @@
+<form autocomplete="off">
+  <div>
+    <label for="login">Логин</label>
+    <input
+      [(ngModel)]="loginForm.login"
+      #loginInput="ngModel"
+      id="login" type="text" required name="login" placeholder="Внесите ваш логин"
+    />
+
+    <ng-container *ngIf="loginInput.errors">
+      <div *ngIf="loginInput.errors['required']">
+        Поле Login не может быть пустым
+      </div>
+    </ng-container>
+  </div>
+
+  <div>
+    <label for="password">Пароль</label>
+    <input
+      [(ngModel)]="loginForm.password"
+      id="password" type="password" required name="password" />
+  </div>
+
+  <button type="submit">Войти</button>
+
+  <pre>{{ loginForm | json }}</pre>
+</form>
